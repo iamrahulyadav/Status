@@ -6,4 +6,9 @@
     <string name="punjabi_tab">PUNJABI</string>
     <string name="tamil_tab">TAMIL</string>
     <string name="video_tab">VIDEOS</string>
+    <string name="msg_tab">MESSAGE</string>
+    <string name="stat_tab">STATUS</string>
+    <string name="jokes_tab">JOKES</string>
+    <string name="loveQuotes_tab">LOVE QUOTES</string>
+    <string name="shayari_tab">SHAYARI</string>
 </resources>

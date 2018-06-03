@@ -1,4 +1,4 @@
-package com.latest.status.Fragments;
+package com.latest.status.Fragments.Status;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,11 +10,12 @@ import android.view.ViewGroup;
 
 import com.latest.status.R;
 
-public class Punjabi extends Fragment {
+public class Hindi extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View root = inflater.inflate(R.layout.status_view,container,false);
         return root;
     }
+
 }

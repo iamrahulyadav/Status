@@ -1,4 +1,4 @@
-package com.latest.status.Adapters;
+package com.latest.status.FragmentAdapters;
 
 import android.content.Context;
 import android.support.annotation.Nullable;
@@ -6,16 +6,16 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.latest.status.Fragments.English;
-import com.latest.status.Fragments.Hindi;
-import com.latest.status.Fragments.LovePics;
-import com.latest.status.Fragments.Punjabi;
-import com.latest.status.Fragments.Tamil;
-import com.latest.status.Fragments.Videos;
+import com.latest.status.Fragments.Status.English;
+import com.latest.status.Fragments.Status.Hindi;
+import com.latest.status.Fragments.Status.LovePics;
+import com.latest.status.Fragments.Status.Punjabi;
+import com.latest.status.Fragments.Status.Tamil;
+import com.latest.status.Fragments.Status.Videos;
 import com.latest.status.R;
 
-public class MainFragmentAdapter extends FragmentPagerAdapter{
-    public MainFragmentAdapter(Context context, FragmentManager fm) {
+public class StatusFragmentAdapter extends FragmentPagerAdapter{
+    public StatusFragmentAdapter(Context context, FragmentManager fm) {
         super(fm); this.context = context;
     }
 

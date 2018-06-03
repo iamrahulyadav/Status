@@ -1,4 +1,4 @@
-package com.latest.status.Fragments;
+package com.latest.status.Fragments.Status;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.latest.status.R;
 
-public class Hindi extends Fragment {
+public class Videos extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
