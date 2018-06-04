@@ -13,7 +13,7 @@ import com.latest.status.FragmentAdapters.LoveQuotesFragmentAdapter;
 import com.latest.status.FragmentAdapters.StatusFragmentAdapter;
 import com.latest.status.R;
 
-public class LoveQuotes extends android.support.v4.app.Fragment{
+public class LoveQuotesActivity extends android.support.v4.app.Fragment{
 
     @Nullable
     @Override
