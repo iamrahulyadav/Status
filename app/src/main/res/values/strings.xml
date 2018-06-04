@@ -11,4 +11,7 @@
     <string name="jokes_tab">JOKES</string>
     <string name="loveQuotes_tab">LOVE QUOTES</string>
     <string name="shayari_tab">SHAYARI</string>
+    <string name="fav_tab">FAVOURITES</string>
+    <string name="share_tab">SHARE</string>
+    <string name="rate_tab">RATE</string>
 </resources>

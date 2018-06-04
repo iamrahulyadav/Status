@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/stat_tab"
+        android:id="@+id/nav_status"/>
+    <item android:title="@string/jokes_tab"
+        android:id="@+id/nav_jokes"/>
+    <item android:title="@string/shayari_tab"
+        android:id="@+id/nav_shayari"/>
+    <item android:title="@string/loveQuotes_tab"
+        android:id="@+id/nav_love"/>
+    <item android:title="@string/fav_tab"
+        android:id="@+id/nav_fav"/>
+    <item android:title="@string/share_tab"
+        android:id="@+id/nav_share"/>
+    <item android:title="@string/rate_tab"
+        android:id="@+id/nav_rate"/>
+</menu>

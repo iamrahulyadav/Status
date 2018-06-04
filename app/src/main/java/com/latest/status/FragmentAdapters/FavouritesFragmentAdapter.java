@@ -21,6 +21,8 @@ public class FavouritesFragmentAdapter extends FragmentPagerAdapter {
     private  Context context;
     private String[] tabNames = {"STATUS","JOKES","LOVE QUOTES","SHAYARI"};
 
+
+
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
