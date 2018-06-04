@@ -16,11 +16,10 @@ import com.latest.status.R;
 
 public class StatusActivity extends Fragment {
 
-
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_phrase,container,false);
+        return inflater.inflate(R.layout.activity_cat,container,false);
     }
 
     @Override

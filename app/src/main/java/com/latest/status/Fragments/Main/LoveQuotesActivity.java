@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.latest.status.FragmentAdapters.LoveQuotesFragmentAdapter;
-import com.latest.status.FragmentAdapters.StatusFragmentAdapter;
 import com.latest.status.R;
 
 public class LoveQuotesActivity extends android.support.v4.app.Fragment{
@@ -18,7 +17,7 @@ public class LoveQuotesActivity extends android.support.v4.app.Fragment{
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.activity_phrase,container,false);
+        return inflater.inflate(R.layout.activity_cat,container,false);
     }
 
     @Override

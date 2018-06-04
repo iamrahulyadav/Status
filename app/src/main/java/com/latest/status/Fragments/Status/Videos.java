@@ -14,7 +14,7 @@ public class Videos extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View root = inflater.inflate(R.layout.status_view,container,false);
-        return root;
+        return inflater.inflate(R.layout.phrase_view_template,container,false);
+
     }
 }
