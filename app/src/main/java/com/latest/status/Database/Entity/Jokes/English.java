@@ -8,7 +8,7 @@ import android.support.annotation.NonNull;
 @Entity(tableName = "eng_jokes")
 public class English {
 
-    @ColumnInfo(name = "id")
+    @PrimaryKey(autoGenerate = true)
     private long uid;
 
     @ColumnInfo(name = "cat")
@@ -21,5 +21,17 @@ public class English {
         this.uid = uid;
         this.cat = cat;
         this.text = text;
+    }
+
+    public long getUid() {
+        return uid;
+    }
+
+    public String getCat() {
+        return cat;
+    }
+
+    public String getText() {
+        return text;
     }
 }

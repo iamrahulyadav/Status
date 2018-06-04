@@ -1,4 +1,5 @@
 <resources>
+
     <string name="app_name">Status</string>
     <string name="eng_tab">ENGLISH</string>
     <string name="hindi_tab">HINDI</string>
@@ -14,4 +15,8 @@
     <string name="fav_tab">FAVOURITES</string>
     <string name="share_tab">SHARE</string>
     <string name="rate_tab">RATE</string>
+
+    <string name="drawer_open">open</string>
+    <string name="drawer_close">close</string>
+
 </resources>

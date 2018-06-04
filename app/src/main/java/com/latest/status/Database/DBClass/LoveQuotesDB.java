@@ -8,7 +8,7 @@ import android.content.Context;
 import com.latest.status.Database.Entity.LoveQuotes.Message;
 import com.latest.status.Database.Entity.LoveQuotes.Status;
 
-@Database(entities = {Message.class, Status.class}, version = 1)
+@Database(exportSchema = false,entities = {Message.class, Status.class}, version = 1)
 public abstract class LoveQuotesDB extends RoomDatabase {
 
     private static LoveQuotesDB INSTANCE;

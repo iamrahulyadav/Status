@@ -17,9 +17,21 @@ public class Hindi {
     @ColumnInfo(name = "text")
     private String text;
 
-    public Hindi(@NonNull long uid, String cat, String text) {
+    public Hindi(long uid, String cat, String text) {
         this.uid = uid;
         this.cat = cat;
         this.text = text;
+    }
+
+    public long getUid() {
+        return uid;
+    }
+
+    public String getCat() {
+        return cat;
+    }
+
+    public String getText() {
+        return text;
     }
 }

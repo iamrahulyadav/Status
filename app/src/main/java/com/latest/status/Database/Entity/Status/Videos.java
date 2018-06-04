@@ -21,4 +21,16 @@ public class Videos {
         this.image = image;
         this.url = url;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public String getUrl() {
+        return url;
+    }
 }

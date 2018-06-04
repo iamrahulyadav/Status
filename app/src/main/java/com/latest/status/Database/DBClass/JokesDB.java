@@ -8,7 +8,7 @@ import android.content.Context;
 import com.latest.status.Database.Entity.Jokes.English;
 import com.latest.status.Database.Entity.Jokes.Hindi;
 
-@Database(entities = {English.class, Hindi.class}, version = 1)
+@Database(exportSchema = false,entities = {English.class, Hindi.class}, version = 1)
 public abstract class JokesDB extends RoomDatabase {
 
     private static JokesDB INSTANCE;

@@ -10,7 +10,7 @@ import com.latest.status.Database.Entity.Favourites.LoveQuotes;
 import com.latest.status.Database.Entity.Favourites.Shayari;
 import com.latest.status.Database.Entity.Favourites.Status;
 
-@Database(entities = {Jokes.class, LoveQuotes.class, Shayari.class, Status.class}, version = 1)
+@Database(exportSchema = false,entities = {Jokes.class, LoveQuotes.class, Shayari.class, Status.class}, version = 1)
 public abstract class FavouritesDB extends RoomDatabase {
 
     private static FavouritesDB INSTANCE;

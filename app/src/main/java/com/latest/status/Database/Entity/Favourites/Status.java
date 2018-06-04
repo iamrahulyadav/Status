@@ -7,7 +7,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity(tableName = "fav_status")
 public class Status {
 
-    @ColumnInfo(name = "uid")
+    @PrimaryKey(autoGenerate = true)
     private int id;
 
     @ColumnInfo(name = "type")
@@ -16,7 +16,7 @@ public class Status {
     @ColumnInfo(name = "cat")
     private String cat;
 
-    @ColumnInfo(name = "type")
+    @ColumnInfo(name = "text")
     private String text;
 
     public Status(int id, String type, String cat, String text) {
@@ -24,5 +24,21 @@ public class Status {
         this.type = type;
         this.cat = cat;
         this.text = text;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getCat() {
+        return cat;
+    }
+
+    public String getText() {
+        return text;
     }
 }

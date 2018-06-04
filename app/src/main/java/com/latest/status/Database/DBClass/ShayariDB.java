@@ -7,7 +7,7 @@ import android.content.Context;
 
 import com.latest.status.Database.Entity.Shayari;
 
-@Database(entities = {Shayari.class}, version = 1)
+@Database(exportSchema = false,entities = {Shayari.class}, version = 1)
 public abstract class ShayariDB extends RoomDatabase {
 
     private static ShayariDB INSTANCE;

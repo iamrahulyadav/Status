@@ -13,7 +13,7 @@ import com.latest.status.Database.Entity.Status.Punjabi;
 import com.latest.status.Database.Entity.Status.Tamil;
 import com.latest.status.Database.Entity.Status.Videos;
 
-@Database(entities = {English.class, Hindi.class, LovePicsExt.class, LovePicsInt.class, Punjabi.class, Tamil.class, Videos.class}, version = 1)
+@Database(exportSchema = false,entities = {English.class, Hindi.class, LovePicsExt.class, LovePicsInt.class, Punjabi.class, Tamil.class, Videos.class}, version = 1)
 public abstract class StatusDB extends RoomDatabase {
 
     private static StatusDB INSTANCE;

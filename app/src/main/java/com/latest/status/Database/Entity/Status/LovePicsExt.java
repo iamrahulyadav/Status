@@ -25,5 +25,16 @@ public class LovePicsExt {
         this.desc = desc;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public byte[] getImage() {
+        return image;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
 }
 
