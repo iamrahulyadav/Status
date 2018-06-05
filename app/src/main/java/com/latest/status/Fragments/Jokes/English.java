@@ -1,5 +1,6 @@
 package com.latest.status.Fragments.Jokes;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -10,7 +11,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.latest.status.Activity.PhraseActvity;
 import com.latest.status.Adapters.PhraseRVAdapter;
+import com.latest.status.Adapters.RecyclerItemClickListener;
+import com.latest.status.DataClass.Category;
+import com.latest.status.Database.DataAdapter.JokesDataAdapter;
 import com.latest.status.R;
 
 import java.util.ArrayList;
@@ -18,6 +23,9 @@ import java.util.List;
 
 public class English extends Fragment {
     private RecyclerView recyclerView;
+    private List<Category> categories;
+    private List<String> cat_name;
+    private List<Integer> cat_id;
 
     @Nullable
     @Override
@@ -31,10 +39,26 @@ public class English extends Fragment {
 
         recyclerView = view.findViewById(R.id.recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-        List<String> asd = new ArrayList<>();
-        asd.add("asdasd");
-        asd.add("fsdfdf");
-        asd.add("adsdasd");
-        recyclerView.setAdapter(new PhraseRVAdapter(asd));
+        categories = new JokesDataAdapter(getContext()).getCatList("Eng_jokes_cates");
+
+        cat_name = new ArrayList<>();
+        cat_id = new ArrayList<>();
+
+        for (int i = 0; i < categories.size(); i++) {
+            cat_id.add(categories.get(i).getId());
+            cat_name.add(categories.get(i).getCat());
+        }
+
+        recyclerView.setAdapter(new PhraseRVAdapter(cat_name));
+
+        recyclerView.addOnItemTouchListener(new RecyclerItemClickListener(getContext(), new RecyclerItemClickListener.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, int position) {
+                Intent intent = new Intent(getContext(), PhraseActvity.class);
+                intent.putExtra("cat_id", categories.get(position).getId());
+                intent.putExtra("table", "englishjokes");
+                startActivity(intent);
+            }
+        }));
     }
 }

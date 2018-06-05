@@ -1,17 +1,15 @@
 package com.latest.status.Activity;
 
 
-import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.design.widget.NavigationView;
+import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
 import android.view.MenuItem;
 
 import com.latest.status.Fragments.Main.FavouritesActivity;
@@ -27,6 +25,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NavigationView navView;
     private ActionBarDrawerToggle drawerToggle;
     private FragmentTransaction transaction;
+    private Fragment fragment;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -34,9 +33,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         setContentView(R.layout.activity_main);
 
         setNavView();
-
+        fragment = new LoveQuotesActivity();
         transaction = getSupportFragmentManager().beginTransaction();
-        transaction.replace(R.id.frag_view, new StatusActivity());
+        transaction.replace(R.id.frag_view, fragment);
         transaction.commit();
 
     }
@@ -60,25 +59,26 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        transaction = null;
         transaction = getSupportFragmentManager().beginTransaction();
         switch(item.getItemId()){
             case R.id.nav_fav :
-                transaction.replace(R.id.frag_view,new FavouritesActivity());
+                fragment = new FavouritesActivity();
                 break;
             case R.id.nav_jokes :
-                transaction.replace(R.id.frag_view,new JokesActivity());
+                fragment = new JokesActivity();
                 break;
             case R.id.nav_love :
-                transaction.replace(R.id.frag_view,new LoveQuotesActivity());
+                fragment = new LoveQuotesActivity();
                 break;
             case R.id.nav_shayari :
-                transaction.replace(R.id.frag_view,new ShayariActivity());
+                fragment = new ShayariActivity();
                 break;
             case R.id.nav_status :
-                transaction.replace(R.id.frag_view,new StatusActivity());
+                fragment = new StatusActivity();
                 break;
         }
-        transaction.commit();
+        transaction.replace(R.id.frag_view, fragment).commit();
         drawer.closeDrawers();
         return true;
     }
